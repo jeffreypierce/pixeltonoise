@@ -1,0 +1,47 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: none;
+}
+
+.p2n {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/8160/p2n.svg) center center no-repeat;
+  background-color: inherit;
+  width: 236px;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  margin-left: -118px;
+  z-index: 2;
+  transition: filter 0.3s ease-in-out;
+}
+.p2n:hover {
+  filter: blur(3px);
+  transition: filter 0.3s ease-in-out;
+  cursor: none;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: #383E60;
+  animation: filter-animation 20s infinite;
+}
+
+.trail {
+  position: absolute;
+  height: 4px; width: 4px;
+  border-radius: 4px;
+  background: #fff;
+  opacity: 0.2;
+}
+
+@keyframes filter-animation {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50%{
+    filter: hue-rotate(-45deg);
+  }
+}
